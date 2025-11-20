@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { Col, Card, Button } from "react-bootstrap";
+import CommentArea from "./CommentArea ";
 
 // const SingleBook = (props) => {
 //   return (
@@ -62,6 +63,9 @@ class SingleBook extends Component {
             <Button variant="primary">
               Compra &euro;{`${this.props.book.price}`}
             </Button>
+            {this.state.selected && (
+              <CommentArea comment={this.props.book.asin}></CommentArea>
+            )}
           </Card.Body>
         </Card>
       </Col>
